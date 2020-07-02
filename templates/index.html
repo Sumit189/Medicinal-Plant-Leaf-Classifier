@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Leafy</title>
+    <link rel="icon" href="/static/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/static/minimize.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+ <form id="myForm" action="http://localhost:5000/" method="Post" enctype="multipart/form-data">
+<div class="wrap">
+  <div class="card">
+    <div class="card-pic-wrap">
+      <img src="/static/plant.png" alt="Plant">
+    </div>
+    <div class="card-content">
+      <h3>Leafy</h3>
+      <p>There are various plants found in nature, some plants are toxic, and some
+        are used for the treatment of diseases. Proper identification of plants is important to
+        distinguish between toxic and medicinal plants..</p>
+        <q><b>Plant is Lives</b></q>
+        <figcaption>
+            &nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp; &mdash; <sp onclick="sumitpaul()" style="color: #70a751; cursor: pointer;font-weight: bold">Sumit</sp>
+        </figcaption>
+        <input  type="file" id="selectfile" accept="image/png, image/jpeg"  style="display:none;" name="file" onchange="this.form.submit()">
+      <p><a class="tooltip" onclick="document.getElementById('selectfile').click()">Select Image <span class="tooltiptext"><b>Select Images from the Testset</b> Currently supported species:<br> {{ labels }}</span></a></p>
+        <p><a href="/static/TestSet.zip" download >Test Set</a></p>
+  </div>
+   
+  </div>
+</div>
+ </form>
+</body>
+<style>
+    body{
+        background: #eee;
+	background: linear-gradient(#A1FFCE,#FAFFD1) ;
+    }
+   .tooltip {
+       cursor:pointer;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+<script>
+    function sumitpaul() {
+    window.open("https://www.sumitpaul.co","_self");
+    }
+</script>
+</html>

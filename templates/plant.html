@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>{{ result }}</title>
+    <link rel="icon" href="/static/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/static/minimize.css">
+    <link rel="stylesheet" href="/static/plant.css">
+</head>
+<body>
+ <form id="myForm" action="http://localhost:5000/" method="Post" enctype="multipart/form-data">
+<div class="wrap">
+  <div class="card">
+    <div class="card-pic-wrap">
+      <img src="http://127.0.0.1:5000/static/{{ imagename }}" alt="{{ result }}">
+    </div>
+    <div class="card-content">
+      <h3>{{ result }}</h3>
+      <p>{{ muse }}</p>
+      <p><a onclick="openit()" style="cursor:pointer;">Select Another Image</a></p>
+    </div>
+  </div>
+
+  </div>
+</div>
+ </form>
+</body>
+<style>
+     body{
+        background: #eee;
+	background: linear-gradient(#A1FFCE,#FAFFD1) ;
+    }
+</style>
+<script>
+    function openit(){
+        window.open("/","_self");
+    }
+</script>
+</html>
